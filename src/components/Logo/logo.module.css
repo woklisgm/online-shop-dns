@@ -1,0 +1,25 @@
+.logo {
+	font-family: 'Roboto', sans-serif;
+	height: 58px;
+	display: flex;
+	flex-direction: row;
+	transition: all 246ms 0.5s ease;
+}
+
+.logo.show {
+	left: 17px;
+	opacity: 1;
+}
+
+.icon {
+	margin-right: 10px;
+}
+
+.logoText {
+	font-weight: 600;
+}
+
+.mode {
+	font-weight: 500;
+	color: #6c727f;
+}

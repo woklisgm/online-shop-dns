@@ -1,0 +1,19 @@
+.button {
+	padding: 0 10px;
+	display: flex;
+	flex-wrap: nowrap;
+	color: #333;
+	transition: color 0.3s ease;
+}
+
+.button:hover {
+	color: #FC5808;
+}
+
+.icon {
+	margin-right: 10px;
+	fill: #979797;
+	display: inline-block;
+	height: 18px;
+	width: 18px;
+}
