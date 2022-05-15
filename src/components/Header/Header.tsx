@@ -25,10 +25,10 @@ function Header() {
 	let modalCloseTimer: NodeJS.Timeout | null = null;
 
 	const handleEnterCartModal = () => {
-		if (cart.length === 0) {
-			setShowModal(false);
-			return;
-		}
+		// if (cart.length === 0) {
+		// 	setShowModal(false);
+		// 	return;
+		// }
 		if (modalCloseTimer) {
 			clearTimeout(modalCloseTimer)
 		}

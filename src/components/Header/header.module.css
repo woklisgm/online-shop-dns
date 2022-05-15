@@ -53,6 +53,7 @@
 
 .cart-btn-wrapper {
 	height: 100%;
+	cursor: default;
 }
 
 .cart-modal {

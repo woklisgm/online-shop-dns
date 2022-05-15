@@ -13,10 +13,6 @@ function CartModal() {
 	const total = cart.reduce((sum, current) => 
 		(sum + (strToNumber(current.price) * current.count)), 0);
 
-	const handleClearCart = () => {
-		clearCart();
-	}
-
 	return (
 		<div className={styles.container}>
 			<div className={styles.body}>
@@ -24,11 +20,17 @@ function CartModal() {
 					<div className={styles.title}>
 						Основные товары {cart.length}
 					</div>
-					<div className={styles['clear-list']} onClick={handleClearCart}>
+					<div className={styles['clear-list']} onClick={clearCart}>
 						Очистить список
 					</div>
 				</div>
 				<div className={styles['goods-list']}>
+					{!cart.length 
+						? <div className={styles['empty-cart']}>
+							Добавьте что-нибудь в корзину
+						  </div>
+						: null
+					}
 					{cart.map(goods => (
 						<CartModalGoods 
 							name={goods.name} 

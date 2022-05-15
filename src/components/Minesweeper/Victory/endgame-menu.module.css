@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300;400;500;700&display=swap');
+
+.wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.panel {
+	padding: 50px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 35px;
+	border: 10px solid #97d9f7;
+	width: 400px;
+	height: 300px;
+	background-color: rgb(215, 225, 229);
+	box-shadow: 0 5px 0 rgb(117, 174, 200),
+		inset 0 0 0 3px #78bce4d9,
+		0 8px 1px 1px rgba(0, 0, 0, .3);
+}
+
+.title {
+	user-select: none;
+	font-family: 'Lobster', sans-serif;
+	font-size: 20px;
+	color: #444;
+	text-shadow: 0 0 4px #fafafa;
+	text-align: justify;
+	text-align-last: center;
+}
+
+.buttons {
+	display: flex;
+	justify-content: space-between;
+}
+
+.game-button {
+	position: relative;
+	padding: 6px 10px 18px;
+	margin: 8px 15px 10px;
+	border-radius: 8px;
+	color: #fff;
+	cursor: pointer;
+	outline: none !important;
+	font-family: 'Lobster', sans-serif;
+	font-size: 20px;
+	line-height: 1.5em;
+	letter-spacing: .05em;
+	text-shadow: 2px 2px 1px #0066a2,
+		-2px 2px 1px #0066a2,
+		2px -2px 1px #0066a2,
+		-2px -2px 1px #0066a2,
+		0px 2px 1px #0066a2,
+		0px -2px 1px #0066a2,
+		0px 4px 1px #004a87,
+		2px 4px 1px #004a87,
+		-2px 4px 1px #004a87;
+	border: none;
+	background: repeating-linear-gradient(45deg, #3ebbf7, #3ebbf7 8px, #45b1f4 8px);
+	border-bottom: 3px solid rgba(16, 91, 146, 0.5);
+	border-top: 3px solid rgba(255, 255, 255, 0.3);
+
+	box-shadow: 0 6px 0 #266b91,
+		0 8px 1px 1px rgba(0, 0, 0, .3),
+		0 10px 0 5px #2a6fa1,
+		0 12px 0 5px #1a6b9a,
+		0 15px 0 5px #0c405e,
+		0 15px 1px 6px rgba(0, 0, 0, .3);
+}
+
+.game-button:active {
+	top: 2px;
+	box-shadow: 0 4px 0 #266b91,
+		0 6px 1px 1px rgba(0, 0, 0, .3),
+		0 8px 0 5px #2a6fa1,
+		0 10px 0 5px #1a6b9a,
+		0 13px 0 5px #0c405e,
+		0 13px 1px 6px rgba(0, 0, 0, .3);
+}
+
+.game-button::before {
+	content: '';
+	height: 10%;
+	position: absolute;
+	width: 40%;
+	background: rgba(255, 255, 255, 0.7);
+	right: 13%;
+	top: 2%;
+	border-radius: 99px;
+}
+
+.game-button::after {
+	content: '';
+	height: 10%;
+	position: absolute;
+	width: 5%;
+	background: rgba(255, 255, 255, 0.7);
+	right: 5%;
+	top: 2%;
+	border-radius: 99px;
+}
+
+.game-button.red {
+	background: repeating-linear-gradient(45deg, #ff4f4c, #ff4f4c 10px, #ff4643 10px, #ff4643 10px);
+	box-shadow: 0 6px 0 #ae2725,
+		0 8px 1px 1px rgba(0, 0, 0, .3),
+		0 10px 0 5px #b63331,
+		0 12px 0 5px #a33634,
+		0 15px 0 5px #631716,
+		0 15px 1px 6px rgba(0, 0, 0, .3);
+	border-bottom: 3px solid rgba(160, 25, 23, 0.5);
+	text-shadow: 2px 2px 1px #d72d21,
+		-2px 2px 1px #d72d21,
+		2px -2px 1px #d72d21,
+		-2px -2px 1px #d72d21,
+		0px 2px 1px #d72d21,
+		0px -2px 1px #d72d21,
+		0px 4px 1px #930704,
+		2px 4px 1px #930704,
+		-2px 4px 1px #930704;
+}
+
+.game-button.red:active {
+	top: 2px;
+	box-shadow: 0 4px 0 #ae2725,
+		0 6px 1px 1px rgba(0, 0, 0, .3),
+		0 8px 0 5px #b63331,
+		0 10px 0 5px #a33634,
+		0 13px 0 5px #631716,
+		0 13px 1px 6px rgba(0, 0, 0, .3);
+}

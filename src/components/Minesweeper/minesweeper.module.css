@@ -27,6 +27,33 @@
 	background-color: aliceblue;
 }
 
+.close {
+	cursor: pointer;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+}
+
+.close::after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 20px;
+	height: 4px;
+	background-color: white;
+	transform: rotate(45deg);
+}
+
+.close::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 20px;
+	height: 4px;
+	background-color: white;
+	transform: rotate(-45deg);
+}
+
 .lost {
 	position: fixed;
 	top: 50%;

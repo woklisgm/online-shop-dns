@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
+import { Tile } from './Tile';
+import { Victory } from './Victory';
 import { EndGameMenu } from './EndGameMenu';
 import styles from './minesweeper.module.css';
-import { Tile } from './Tile';
+import { useActions } from '../../hooks/useActions';
 
 function Minesweeper() {
 	enum TILES {
@@ -17,6 +19,7 @@ function Minesweeper() {
 	let bombCount = 0;
 
 	const [gameOver, setGameOver] = useState(false);
+	const [victory, setVictory] = useState(false);
 	const [gameMap, setGameMap] = useState<Array<Array<number>>>(
 		new Array(fieldSize).fill([]).map(() => new Array(fieldSize).fill(0))	
 	);
@@ -24,6 +27,8 @@ function Minesweeper() {
 	const [gameTiles, setGameTiles] = useState<Array<Array<string>>>(
 		new Array(fieldSize).fill([]).map(() => new Array(fieldSize).fill(TILES.SHOW))
 	);
+	
+	const {hideGame} = useActions();
 
 	const mineswepperRef = useRef<HTMLDivElement>(null);
 	mineswepperRef.current?.style.setProperty('--board-size', `${fieldSize * tileSize}px`);	
@@ -214,21 +219,25 @@ function Minesweeper() {
 
 	useEffect(() => {
 		if (getVisibleTiles() === bombCount) {
-			alert("ПОБЕДА");
+			setVictory(true);
 		}
 	}, [gameTiles])
 
 	return (
 		<div className={styles.wrapper} >
+			{victory
+				? <Victory resetGame={handleNewGame} />
+				: null
+			}
 			{gameOver 
 				? <EndGameMenu title={'Упс, может попробуешь еще раз?'} resetGame={handleNewGame} />
 				: null
 			}
-
 			<div 
 				ref={mineswepperRef} 
 				className={styles.mineswepper}
 			> 
+				<div className={styles.close} onClick={hideGame}></div>
 				{gameMap.map((row, i) => 
 					row.map((cell, j) => 
 						<Tile 
