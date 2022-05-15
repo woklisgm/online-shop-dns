@@ -1,8 +1,24 @@
 .categories {
-	margin: 9px 0;
 	display: flex;
+	padding-top: 8px;
 	flex-direction: column;
-	flex: 0 0 280px;
+
+	box-sizing: border-box;
+	background-color: var(--card-color);
+	box-shadow: 0 1px 2px 0 rgb(0 0 0 / 16%);
+	border-radius: 8px;
 }
 
+@media (min-width: 992px) and (max-width: 1999px) {
+	.categories {
+		width: 220px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.categories {
+		flex-basis: 280px;
+		flex-grow: 0;
+	}
+}
 

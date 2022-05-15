@@ -4,11 +4,42 @@
 
 .item {
 	padding: 10px 20px;
-	color: #333;
+	color: var(--history-color);
 	cursor: pointer;
 }
 
+/* .list.active {
+	
+	max-height: 100%;
+} */
+
+/* .list.active .item {
+	padding: 10px 0;
+	max-height: 100px;
+} */
+
+/* .list.active .item:nth-child(1) {
+	transition: all .5s 0.12s ease;
+}
+
+.list.active .item:nth-child(2) {
+	transition: all .5s 0.14s ease;
+}
+
+.list.active .item:nth-child(3) {
+	transition: all .5s 0.16s ease;
+}
+
+.list.active .item:nth-child(4) {
+	transition: all .5s 0.18s ease;
+} */
+
+.item:nth-child(1) {
+	animation-delay: 1s;
+}
+
 .item:hover {
-	background-color: #FCF8E3;
+	/* background-color: #FCF8E3; */
+	background-color: var(--search-background);
 	color: #FC6B22;
 }

@@ -1,0 +1,33 @@
+.story {
+	background-color: #494669bd;
+	border-radius: 8px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	width: 139px;
+	height: 181px;
+	margin-right: 12px;
+}
+
+.wrapper {
+
+}
+
+.image {
+	position: relative;
+	width: 220px;
+	left: -5px;
+	overflow: hidden;
+
+	border-radius: 10% 30% 20% 80%;
+}
+
+.text {
+	white-space: normal;
+	padding: 12px;
+	color: white;
+	font-size: 12px;
+	user-select: none;
+	flex-grow: 1;
+}

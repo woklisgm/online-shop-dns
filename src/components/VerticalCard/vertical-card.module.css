@@ -1,0 +1,149 @@
+.verticalCard {
+
+}
+
+.image {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 160px;
+	width: 265px;
+}
+
+.name {
+	white-space: normal;
+	min-height: 92px;
+	line-height: 22px;
+	font-size: 16px;
+	color: #333;
+	position: relative;
+}
+
+.name::after {
+	background: linear-gradient(hsla(0, 0%, 100%, 0), #fff);
+	content: "";
+	height: 30px;
+	left: 0;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+/* .name span {
+	position: relative;
+}
+
+.name span::after {
+	content: "";
+	height: 30px;
+	left: 0;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+} */
+
+.info {
+	margin-top: auto;
+	display: flex;
+}
+
+.price {
+	background: linear-gradient(270deg, #f6f6f6, hsla(0, 0%, 100%, 0));
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	justify-content: center;
+	min-height: 44px;
+	position: relative;
+}
+
+.price::before {
+	content: "\1F6C8";
+	position: absolute;
+	right: 5px;
+	color: rgba(119, 119, 119, 0.5);
+	font-size: 26px;
+}
+
+.mainPice {
+	font-weight: 500;
+}
+
+.credit {
+	color: rgb(96, 96, 96);
+	font-size: 12px;
+	line-height: 14px;
+}
+
+.btn {
+	height: 44px;
+	width: 44px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid rgb(217, 217, 217);
+	fill: rgb(140, 140, 140);
+	border-radius: 8px;
+	margin-left: 5px;
+}
+
+.btn:hover {
+	background-image: linear-gradient(0deg, rgb(252, 133, 7), rgb(255, 162, 24));
+	fill: white;
+}
+
+.btn.active {
+	fill: rgb(252, 133, 7);
+	border: 1px solid rgb(252, 133, 7);
+}
+
+.btn.active:hover {
+	fill: white
+	
+}
+
+@media (min-width: 992px) and (max-width: 1999px) {
+	.verticalCard {
+		padding: 0 12px;
+		width: 231px;
+		height: 290px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 160px;
+		width: 231px;
+	}
+
+	.name {
+		min-height: 20px;
+		max-height: 70px;
+		font-size: 14px;
+		line-height: 18px;
+		overflow: hidden;
+	}
+}
+
+@media (min-width: 1200px) {
+	.verticalCard {
+		padding-right: 24px;
+		width: 288px;
+		height: 315px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.name {
+		min-height: 90px;
+		max-height: 90px;
+		font-size: 14px;
+		line-height: 18px;
+		overflow: hidden;
+	}
+}
+

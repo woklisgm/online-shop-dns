@@ -1,6 +1,6 @@
 .btn {
 	border-radius: 10px;
-	background-color: white;
+	background-color: var(--card-color);
 	padding: 0 15px;
 	height: 40px;
 	position: relative;
@@ -23,7 +23,7 @@
 }
 
 .text-black {
-	color: #333;
+	color: var(--card-title);
 }
 
 .border-orange {

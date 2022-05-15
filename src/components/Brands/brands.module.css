@@ -1,0 +1,89 @@
+.container {
+	position: relative;
+	overflow: hidden;
+}
+
+.slider {
+	white-space: nowrap;
+	transition: all 0.5s ease;
+}
+
+.brand {
+	display: inline-block;
+	vertical-align: top;
+	padding-right: 8px;
+}
+
+.brand:last-child {
+	padding: 0;
+}
+
+.wrapper {
+	/* height: 100px; */
+	display: flex;
+	align-items: center;
+}
+
+.link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 18px;
+	height: 70px;
+
+	box-sizing: border-box;
+	background-color: white;
+	box-shadow: 0 1px 2px 0 rgb(0 0 0 / 16%);
+	border-radius: 8px;
+}
+
+/* BUTTONS */
+
+.btn {
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.4s ease;
+	z-index: 1000;
+
+	height: 48px;
+	width: 48px;
+	display: flex;
+	font-size: 20px;
+	font-weight: 500;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	position: absolute;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	box-shadow: 0 5px 20px 0 rgb(0 0 0 / 20%),
+		inset 0 0 0 1px rgb(0 0 0 / 10%);
+}
+
+.container:hover .btn{
+	visibility: visible;
+	opacity: 1;
+}
+
+.container:hover .leftBtn{
+	left: 10px;
+}
+
+.container:hover .rightBtn{
+	right: 10px;
+}
+
+.btn:hover {
+	color: white;
+	background-color: #fc9c2f;
+}
+
+.leftBtn {
+	left: -20px;
+}
+
+.rightBtn {
+	right: -20px;
+}

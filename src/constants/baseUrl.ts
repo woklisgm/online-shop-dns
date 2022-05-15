@@ -1,0 +1,1 @@
+export const BASE_MOCK_URL = "https://mock-dns.herokuapp.com"; 

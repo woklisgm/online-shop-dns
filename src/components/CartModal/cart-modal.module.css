@@ -1,0 +1,42 @@
+.container {
+	box-sizing: border-box;
+	background-color: white;
+	box-shadow: 0 0 12px rgb(0 0 0 / 16%);
+	backdrop-filter: blur(11px);
+	z-index: 1000;
+	width: 500px;
+
+	border-radius: 8px;
+	padding: 24px;
+	color: #333;
+}
+
+.body {
+	border-bottom: 1px solid rgba(220, 220, 220, 0.5);
+	margin-bottom: 15px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.title {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.clear-list {
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.total {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 18px;
+	font-weight: 600;
+}
+

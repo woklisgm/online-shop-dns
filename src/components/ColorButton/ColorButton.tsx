@@ -15,7 +15,7 @@ function ColorButton({title, border, color }: IColorButtonProps) {
 	const classes = classNames(styles.btn, style);
 
 	return (
-		<button className={classes}>Войти</button>
+		<button className={classes}>{title}</button>
 	);
 }
 

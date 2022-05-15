@@ -1,0 +1,1 @@
+export {WishlistBanner} from './WishlistBanner';

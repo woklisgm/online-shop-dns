@@ -1,17 +1,35 @@
 .header {
-	width: 100%;
-	min-height: 64px;
-	background-color: white;
-	box-shadow: 0 1px 24px 0 rgb(0 0 0 / 14%);
 	display: flex;
+	position: fixed;
 	align-items: center;
 	justify-content: center;
+	z-index: 1000;
+	width: 100%;
+	min-height: 64px;
+	background-color: var(--card-color);
+	border: 1px solid var(--border-color);
+	box-shadow: 0 1px 24px 0 rgb(0 0 0 / 14%);
+	color: var(--color);
 }
 
 .container {
 	display: flex;
 	align-items: center;
-	min-width: var(--big-container);
+	
+}
+
+/* TODO: -> var */
+@media (min-width: 1200px) {
+	.container {
+		/* min-width: var(--big-container); */
+		min-width: 1200px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1999px) {
+	.container {
+		width: 972px;
+	}
 }
 
 .logo {
@@ -28,7 +46,51 @@
 	display: flex;
 	font-size: 14px;
 	padding: 18px 0;
+	/* height: 64px; */
 	align-items: center;
 	margin-left: 15px;
 }
 
+.cart-btn-wrapper {
+	height: 100%;
+}
+
+.cart-modal {
+	animation: showCartModal .15s ease-in forwards;
+	opacity: 0;
+	transform-origin: top right;
+	transition: top .5s ease 0s;
+	position: absolute;
+}
+
+.hide-modal {
+	animation: hideCartModal .15s ease-in forwards;
+	opacity: 0;
+	display: none;
+}
+
+@keyframes showCartModal {
+	0% {
+		opacity: 0
+	}
+	10% {
+		opacity: 0;
+		transform: scale(.8)
+	}
+	to {
+		opacity: 1;
+		transform: scale(1)
+	}
+}
+
+@keyframes hideCartModal {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	to {
+		opacity: 0;
+		transform: scale(.8);
+		
+	}
+}

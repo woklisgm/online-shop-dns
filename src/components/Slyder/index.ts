@@ -1,0 +1,1 @@
+export {Slyder} from './Slyder';

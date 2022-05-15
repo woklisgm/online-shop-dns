@@ -1,11 +1,17 @@
+import classNames from 'classnames';
 import styles from './search-history.module.css';
 
-function SearchHistory() {
-	const requests = ['iphone13', 'samsung m12', 'ginzuu', 'наушники'];
+interface ISearchHistoryProps {
+	show: boolean;
+	history: Array<string>;
+}
+
+function SearchHistory({show, history}: ISearchHistoryProps) {
+	const classes = classNames(styles.list, {[styles.active]: show});
 
 	return (
-		<ul className={styles.list}>
-			{requests.map(request => <li className={styles.item}>{request}</li>)}
+		<ul className={classes} >
+			{history.map((request, i) => <li key={i} className={styles.item}>{request}</li>)}
 		</ul>
 	)
 }

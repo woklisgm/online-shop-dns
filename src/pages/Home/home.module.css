@@ -3,18 +3,76 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding-top: 64px;
 }
 
 .container {
 	display: flex;
 	flex-direction: column;
-	min-width: var(--big-container);
 }
 
 .top {
 	margin-top: 15px;
 	display: flex;
+	justify-content: space-between;
+	margin-bottom: 38px;
 }
 
+.center {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.promotions {
+	display: flex;
+	justify-content: space-between;
+}
 /* --------- CATEGORIES --------- */
 
+
+/* --------- ACTUAL OFFERS --------- */
+.actualOffers {
+	width: 100%;
+}
+
+/* --------- INFO CARDS --------- */
+.infoCards {
+	width: 100%;
+	min-height:200px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 10px;
+}
+
+/* --------- BRANDS --------- */
+
+
+.productCollection {
+	margin-bottom: 48px;
+}
+
+/* TODO: -> var */
+@media (min-width: 1200px) {
+	.container {
+		min-width: 1200px;
+	}
+
+	.center {
+		width: calc(100% - 300px);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1999px) {
+	.container {
+		width: 972px;
+	}
+
+	.center {
+		max-width: calc(100% - 240px);
+	}
+}

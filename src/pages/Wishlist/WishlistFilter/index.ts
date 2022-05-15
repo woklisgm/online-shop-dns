@@ -1,0 +1,1 @@
+export {WishlistFilter} from './WishlistFilter';

@@ -1,29 +1,46 @@
-import { Card } from '../ui/Card';
 import { CategoryItem } from './CategoryItem';
 import styles from './categories.module.css';
+import { useEffect, useState } from 'react';
+import { BASE_MOCK_URL } from '../../constants/baseUrl';
+
+
+interface ICategory {
+	title: string;
+	samples: string[];
+	icon: string;
+}
 
 function Categories() {
-	const categories = [
-		{title: 'Бытовая техника', samples: ['для дома', 'уход за собой']},
-		{title: 'Смартфоны и гаджеты', 	samples: ['планшеты', 'фототехника']},
-		{title: 'ТВ и мультимедиа', samples: ['аудио', 'видеоигры']},
-		{title: 'Компьютеры', samples: ['комплектующие', 'ноутбуки']},
-		{title: 'Офис и сеть', samples: ['кресла', 'проекторы']},
-		{title: 'Отдых и развлечения', samples: ['электросамокаты', 'мангалы']},
-		{title: 'Инструменты', samples: ['аккумуляторные', 'садовые']},
-		{title: 'Строительство и ремонт', samples: ['электрика', 'сантехника']},
-		{title: 'Дом, декор и кухня', samples: ['зоотовары', 'посуда']},
-		{title: 'Автотовары', samples: ['звук', 'автокресла']},
-		{title: 'Аксессуары и услуги', samples: ['наушники', 'мыши']},
-		{title: 'Уцененные товары', samples: []},
-	]
+	const [isLoading, setIsLoading] = useState(false);
+	const [categories, setCategories] = useState<ICategory[]>([]);
+
+	const getCategories = async () => {
+		setIsLoading(true);
+		try {
+			const response = await fetch(`${BASE_MOCK_URL}/categories/`);
+			const result = await response.json();
+
+			setCategories(result);
+		} catch (e) {
+			console.error(e);
+		} finally {
+			setIsLoading(false);
+		}
+	}
+
+	useEffect(() => {
+		getCategories();
+	}, [])
 
 	return (
-		<Card>
-			<ul className={styles.categories}>
-				{categories.map(el => <CategoryItem title={el.title} samples={el.samples} /> )}
-			</ul>
-		</Card>
+		<>
+			{ categories.length 
+				? (<ul className={styles.categories}>
+					{categories.map(el => <CategoryItem icon={el.icon} key={el.title} title={el.title} samples={el.samples} /> )}
+				   </ul>)
+				: null
+			}
+		</>
 	);
 }
 

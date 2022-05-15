@@ -1,0 +1,27 @@
+.container {
+	/* height: 214px; */
+}
+
+.title {
+	font-size: 22px;
+	font-weight: 600;
+	margin-bottom: 16px;
+}
+
+.body {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.back {
+	background-color: var(--card-color);
+	box-shadow: 0 1px 2px 0 rgb(0 0 0 / 16%);
+	border-radius: 8px;
+	padding: 24px;
+}
+
+.tabs {
+	display: flex;
+	margin-bottom: 24px;
+}
