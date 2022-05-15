@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
-import styles from './slyder.module.css';
 import classNames from 'classnames';
+import styles from './slyder.module.css';
 import { getLeftCoordEl, getRightCoordEl } from '../../utils/ui/positonRelativeViewport';
 
 interface ISliders {

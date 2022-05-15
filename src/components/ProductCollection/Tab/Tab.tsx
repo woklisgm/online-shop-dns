@@ -1,11 +1,11 @@
-import { IData } from '../ProductCollection';
 import classNames from 'classnames';
+import { ICollection } from '../ProductCollection';
 import styles from './tab.module.css';
 
 interface ITabProps {
-	item: IData;
+	item: ICollection;
 	active: boolean;
-	handleClick: (item: IData) => void;
+	handleClick: (title: string) => void;
 }
 
 function Tab({item, active, handleClick}: ITabProps) {
@@ -16,7 +16,7 @@ function Tab({item, active, handleClick}: ITabProps) {
 	return (
 		<div 
 			className={style} 
-			onClick={() => handleClick(item)}
+			onClick={() => handleClick(item.title)}
 		>
 			{item.title}
 		</div>

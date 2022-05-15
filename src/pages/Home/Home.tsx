@@ -11,8 +11,6 @@ import { ProductCollection } from '../../components/ProductCollection';
 
 import styles from './home.module.css';
 
-import {countryHouse} from '../../constants/countryHouse.js';
-import {clothingCare} from '../../constants/clothingCare.js';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../../hooks/useActions';
 
@@ -72,14 +70,12 @@ function Home() {
 					<ProductCollection 
 						title='Все для дачи' 
 						request='country-house' 
-						collection={countryHouse} 
 					/>
 				</div>
 				<div>
 					<ProductCollection 
 						title='Уход за одеждой' 
 						request='clothing-care' 
-						collection={clothingCare} 
 					/>
 				</div>
 			</div>
