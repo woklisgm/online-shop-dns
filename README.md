@@ -1,4 +1,4 @@
-# Онлайн магазин [Ссылка](https://react-dns.herokuapp.com/)
+# [Онлайн магазин](https://react-dns.herokuapp.com/)
 
 ### `React, Redux, TypeScript, React Roter v6`
 
