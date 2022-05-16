@@ -63,7 +63,7 @@ function Header() {
 	return (
 		<nav className={styles.header}>
 			<div className={styles.container}>
-				<Link to="/" className={styles.logo} />
+				<Link to="/" className={styles.logo}>Logo</Link>
 				<Search />
 
 				<div
